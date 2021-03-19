@@ -19,7 +19,7 @@ font-size: 100%;
 font: inherit;  
 vertical-align: baseline;  
 }
-/*GENERAL STYLES*/
+/*General Styles*/
 html{
     font-size:62.5%;
 }
@@ -44,7 +44,9 @@ a {
 }	
 a:hover {	
     font-weight: bold;	
-}	
+}
+
+/*What in the HTML is this refering to? I see no class of name in the html.*/
 .name{	
     font-size: 150%;	
     font-weight: 200;	
@@ -79,7 +81,6 @@ nav a{
 }
 nav span{
     border-left:3px solid #626262;
-
 }
 /*Title Section Styles*/
 .title-container{
@@ -126,7 +127,6 @@ button:hover{
     width:80%;
     margin:0 auto;
 }
-
 .artist{
     width:40%;
     text-align:center;
@@ -139,35 +139,57 @@ button:hover{
 
 @media(max-width: 500px) {
 
-    /*Header Styles */
-
-    nav span {
-        margin: 0 3%;
+    /*General Styles*/
+    h1 {
+        font-size:3.5rem;
+        margin-bottom: 1%;
     }
-
+    a {	
+        font-size:1.3rem;	
+    }	
+    img {	
+        height:16rem;	
+    }
+    /*Header Styles*/
+    nav{
+        width:45%;
+        margin-top:3%;
+    }
+    nav a {
+        font-size: 1.8rem;
+    }
+    nav span{
+        border-left:2px solid #626262;
+    }
     /*Title Section Styles*/
-
-    .title-container div {
-        width: 100%;
+    .title-container div {		
+        width:100%;
+        height:35vh;
+        margin: 4% 0 2% 0;
+    }	
+    .title-container hr{
+        width:100%;
+        height: 4px;
+    }
+    button{
+        font-size:1.2rem;
     }
 
-    .title-container hr {
-        width: 100%;
-    }
     /*Artists Section Styles */
-
     .artists-container{
         flex-direction: column;
         align-items: center;
         width: 100%;
+        margin-bottom: 12%;
     }
-
-    .artist {
-        width: 50%;
+    .artist{
+        width:55%;
+        text-align:center;
+        margin-bottom: 3%;
     }
-
-    .artist img {
-        width: 80%;
-        height: 20vh;
+    .artist img{
+        width:75%;
     }
-}
+    .bio {
+        font-size: 0.5rem;
+    }
