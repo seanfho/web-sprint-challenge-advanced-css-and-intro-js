@@ -209,12 +209,12 @@ Practice accessing data above by console.log-ing following items:
 
 //(1) Name of the first artist (0th index) in the array
 
-console.log("Task 1(1):", "The name of the first artist is:", artists[0]["name"]);
+console.log("Task 1(1): ", "The name of the first artist is:", artists[0]["name"]);
 
 
 //(2) Bio of the third artist (2nd index) in the array 
 
-console.log("Task 1(2):", "The bio of the third artist is:", artists[2]["bio"]);
+console.log("Task 1(2): ", "The bio of the third artist is:", artists[2]["bio"]);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -223,7 +223,7 @@ There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is current
 
 artists[8]["name"] = "Vincent Van Gogh";
 
-console.log("Task 2:", artists[8]["name"]);
+console.log("Task 2: ", artists[8]["name"]);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
@@ -238,7 +238,7 @@ function getArtistByIndex(arr, index) {
   return `the artist at index ${index} is ${arr[index]["name"]}`;
 }  
 
-console.log("Task 3:", getArtistByIndex(artists, 0));
+console.log("Task 3: ", getArtistByIndex(artists, 0));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -252,6 +252,7 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 function get20s(arr){
   let newArr = [];
   for(let i = 0; i < arr.length; i++){
+    // function to referencing "years" value a given index and "spliting" it into an array with 2 year values (in the form ["year1", "year2"]) conditional 1 is looking if "year1" is greater or equal to 1900 and conditional 2 is looking if "year2" is less than 2000
     if(arr[i]["years"].split(" - ")[0] >= 1900 && arr[i]["years"].split(" - ")[1] < 2000){
       newArr.push(arr[i]["name"]);
     }
@@ -259,7 +260,7 @@ function get20s(arr){
   return newArr;
 }
 
-console.log("Task 4:", get20s(artists));
+console.log("Task 4: ", get20s(artists));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -271,10 +272,13 @@ console.log("Task 4:", get20s(artists));
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/){
-   /*Your Code Here*/
+function removeArtist(arr, index){
+  arr.splice(index, 1);
+  return arr.length;
 }
-   
+
+console.log("Task 5: ", removeArtist(artists, 0)/*, artists*/);
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -292,10 +296,23 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
+// to allow this function to be more reuseable I'm going to declare the above object outside of the function so that I can use obj as a parameter in the function
+
+const sean = {
+  "id": 20,
+  "name": "Sean",
+  "years": "1992 - xxxx",
+  "genre": "Web Design",
+  "nationality": "Canadian",
+  "bio": "I'm a student from Toronto, Ontario, Canada. I want to work in the tech industry as a developer once I've finished my studies and practice at Lambda School!"
+}
+
+function addArtist(arr, obj){
+    arr.push(obj);
+    return arr;
   }
 
+  console.log("Task 6: ", addArtist(artists, sean));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
