@@ -241,7 +241,6 @@ function getArtistByIndex(arr, index) {
 console.log("Task 3:", getArtistByIndex(artists, 0));
 
 
-
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use get20s to do the following: 
 1. Receive an array
@@ -250,10 +249,17 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/){
-  /*Your Code Here*/
+function get20s(arr){
+  let newArr = [];
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i]["years"].split(" - ")[0] >= 1900 && arr[i]["years"].split(" - ")[1] < 2000){
+      newArr.push(arr[i]["name"]);
+    }
+  }
+  return newArr;
 }
 
+console.log("Task 4:", get20s(artists));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
