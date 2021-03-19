@@ -298,13 +298,14 @@ Example: addArtist(artists) should return the artists array with the above objec
 
 // to allow this function to be more reuseable I'm going to declare the above object outside of the function so that I can use obj as a parameter in the function
 
-const sean = {
+const seanHo = {
   "id": 20,
-  "name": "Sean",
+  "name": "Sean Ho",
   "years": "1992 - xxxx",
   "genre": "Web Design",
   "nationality": "Canadian",
-  "bio": "I'm a student from Toronto, Ontario, Canada. I want to work in the tech industry as a developer once I've finished my studies and practice at Lambda School!"
+  "bio": "I'm a student from Toronto, Ontario, Canada. I want to work in the tech industry as a developer once I've finished my studies and practice at Lambda School!",
+  "paintings": 101
 }
 
 function addArtist(arr, obj){
@@ -312,7 +313,7 @@ function addArtist(arr, obj){
     return arr;
   }
 
-  console.log("Task 6: ", addArtist(artists, sean));
+  console.log("Task 6: ", addArtist(artists, seanHo));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -322,11 +323,17 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(arr){
+  let newArr = [];
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i]["paintings"] > 100) {
+      newArr.push(arr[i]["name"]);
+    }
+  }
+  return newArr;
 }
 
-
+console.log("Task 7: ", lotsOfArt(artists));
 
 
 // 🎨🎨 STRETCH 🎨🎨//
