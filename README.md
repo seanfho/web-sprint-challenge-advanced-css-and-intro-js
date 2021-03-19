@@ -24,9 +24,25 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Please answer the following questions below, you may edit the readme file to include your answers below the question.
 
 1. How would you describe acessibility on the web to someone new to programming?
-2. Talk about 3 different things you can do to ensure your website is accessible. 
+
+    Accessibility on the web is, in part, a measure of how useable the web page is to all people, including those with disabilities. This includes web pages and web tools that are designed and coded so that anyone can understand, navigate, and interact with them. Choice of design can affect the accessibility of the webpage and should attempt to benefit those with and without disabilities. Accessible designs should consider and attempt to make the websites useable despite visual, auditory, speech, physical, cognitive, and other disabilities or impairments. 
+
+
+2. Talk about 3 different things you can do to ensure your website is accessible.
+
+    To ensure that a website is accessible developers can:
+    1. Write HTML using semantic tags. Those who browse using screen readers will have an easier time understanding what is important on a webpage and also better understand the context of the information provided.
+    2. Use descriptive language in the alt attribute of all images. This ensures that those using screen readers, or when an image doesn't load properly that users still understand the information the image is menat to convey.
+    3. Choose color in design that isn't important to functionality of the page. This ensures that users who use greyscale monitors, interact in a non-visual way (such as braille outputs), are colorblind, or simply are in an environment with poor lighting can still easily navigate the website, use web tools, and understand and interpret important information.
+
 3. How would you explain the concept of a variable to someone new to programming?
+
+    A varible, simply put, a container for storing data/values. Variables are useful because they can hold data for us to be called on later in our code, and at the same time can be changed (or be coded to remain unchanged) or operated on to help developers achieve specific goals or tasks in their code.
+
 4. What is the purpose of using functions in code?
+
+    Functions provide logical structure to programs by breaking down larger problems into smaller modules with specific purposes. In addition, functions are reusable sections of code that can be called throughout a program to complete tasks that need to be repeated with without having a rely on redundant code. Using functions in code make it easier to maintain and reduces the possibility that certain sections of code are updated while other sections are not.
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
